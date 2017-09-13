@@ -3,8 +3,12 @@ package com.writealone.springbootstarter.topic;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.writealone.springbootstarter.service.TopicService;
 
 /**
  * 
@@ -15,18 +19,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TopicController {
 
+	@Autowired
+	private TopicService topicService;
+	
 	@RequestMapping("/topics")
 	public List<Topic> getTopics() {
-		
-		List<Topic> topicList = new ArrayList<Topic>();
-		Topic t1 = new Topic("spring-01", "spring framework", "beautifull framework");
-		Topic t2 = new Topic("spring-03", "java framework", "beautifull backend language");
-		Topic t3 = new Topic("spring-02", "javascript framework", "beautifull frontend language");
-
-		topicList.add(t1);
-		topicList.add(t2);
-		topicList.add(t3);
-		
-		return topicList;
+		return topicService.getTopics();
+	}
+	
+	@RequestMapping("/topics/{id}")
+	public Topic getTopic(@PathVariable String id) {
+		return topicService.getTopic(id);
 	}
 }
