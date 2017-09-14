@@ -41,15 +41,17 @@ public class TopicService {
 				topics.setId(topic.getId());
 				topics.setName(topic.getName());
 				topics.setDescription(topic.getDescription());
+				return;
 			}
 		}
 
 	}
 	
-	public void deleteTopic(Topic topic) {
+	public void deleteTopic(String id) {
 		for (Topic topics : topicList) {
-			if (topics.getId().equals(topic.getId())) {
+			if (topics.getId().equals(id)) {
 				topicList.remove(topics);
+				return;
 			}
 		}
 
