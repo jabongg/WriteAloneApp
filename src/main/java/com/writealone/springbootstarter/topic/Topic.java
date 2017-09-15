@@ -2,6 +2,7 @@ package com.writealone.springbootstarter.topic;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  * 
@@ -10,6 +11,7 @@ import javax.persistence.Id;
  */
 
 @Entity
+@Table(name="WA_POST", schema="WRITA")
 public class Topic {
 	
 	@Id
