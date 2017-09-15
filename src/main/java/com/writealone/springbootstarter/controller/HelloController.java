@@ -1,4 +1,4 @@
-package com.writealone.springbootstarter.hello;
+package com.writealone.springbootstarter.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
