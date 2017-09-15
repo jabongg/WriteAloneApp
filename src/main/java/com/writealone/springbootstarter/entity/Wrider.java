@@ -15,21 +15,33 @@ import javax.persistence.Table;
 public class Wrider {
 
 	@Id
-	private Long wriderId;
+	private String wriderId;
 	private String wriderName;
 	private String wriderEmail;
 	private String wriderPass;
 
+	public Wrider() {
+		
+	}
+	
+	public Wrider(String wriderId, String wriderName, String wriderEmail,
+			String wriderPass) {
+		super();
+		this.wriderId = wriderId;
+		this.wriderName = wriderName;
+		this.wriderEmail = wriderEmail;
+		this.wriderPass = wriderPass;
+	}
 	/**
 	 * @return the wriderId
 	 */
-	public Long getWriderId() {
+	public String getWriderId() {
 		return wriderId;
 	}
 	/**
 	 * @param wriderId the wriderId to set
 	 */
-	public void setWriderId(Long wriderId) {
+	public void setWriderId(String wriderId) {
 		this.wriderId = wriderId;
 	}
 	/**
