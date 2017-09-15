@@ -1,13 +1,18 @@
 package com.writealone.springbootstarter.topic;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
  * 
  * @author  Jang
  * Sept 13, 2017
  */
 
+@Entity
 public class Topic {
 	
+	@Id
 	private String TopicId;
 	private String TopicName;
 	private String TopicDescription;
