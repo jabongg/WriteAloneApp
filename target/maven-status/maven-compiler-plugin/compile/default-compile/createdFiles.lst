@@ -1,0 +1,13 @@
+com\writealone\springbootstarter\controller\HelloController.class
+com\writealone\springbootstarter\entity\Wrider.class
+com\writealone\springbootstarter\topic\TopicController.class
+com\writealone\springbootstarter\dao\WriderDao.class
+com\writealone\springbootstarter\WriteAloneBootApp.class
+com\writealone\springbootstarter\topic\TopicRepository.class
+com\writealone\springbootstarter\controller\WriderController.class
+com\writealone\springbootstarter\repository\WriderRepository.class
+com\writealone\springbootstarter\topic\Topic.class
+com\writealone\springbootstarter\dao\impl\WriderDaoImpl.class
+com\writealone\springbootstarter\service\TopicService.class
+com\writealone\springbootstarter\service\WriderService.class
+com\writealone\springbootstarter\service\impl\WriderServiceImpl.class

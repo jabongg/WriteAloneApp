@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.writealone.springbootstarter.entity.Wrider;
+import com.writealone.springbootstarter.service.WriderService;
 import com.writealone.springbootstarter.service.impl.WriderServiceImpl;
 
 /**
@@ -19,10 +20,10 @@ import com.writealone.springbootstarter.service.impl.WriderServiceImpl;
 public class WriderController {
 	
 	@Autowired
-	private WriderServiceImpl wriderServiceImpl;
+	private WriderService wriderService;
 	
 	@RequestMapping(method=RequestMethod.POST, value="/wriders")
 	public void addWrider( @RequestBody Wrider wrider) {
-		wriderServiceImpl.save(wrider);
+		wriderService.save(wrider);
 	}
 }
